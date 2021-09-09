@@ -1,25 +1,32 @@
 <template lang='html'>
-    <div>
-        <Header />
-        <hr>
-        <CasesInfo />
-        <hr>
-        <VaccinatedChart />
-
+    <div class="home">
+        <NewHeader />
+        <VaccinePieChart />
+        <LeafletMap />
+        <CasesByAgeChart />
+        <DeathsByAgeChart />  
+        <UsefulInfo />  
     </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
-import CasesInfo from '@/components/CasesInfo.vue';
-import VaccinatedChart from '@/components/VaccinatedChart.vue';
+import NewHeader from '@/components/NewHeader.vue';
+import VaccinePieChart from '@/components/VaccinePieChart.vue';
+import CasesByAgeChart from '@/components/CasesByAgeChart.vue';
+import DeathsByAgeChart from '@/components/DeathsByAgeChart.vue';
+import LeafletMap from '@/components/LeafletMap.vue';
+import UsefulInfo from '@/components/UsefulInfo.vue';
+
 
 export default {
     name: 'Home',
     components: {
-        Header,
-        CasesInfo,
-        VaccinatedChart,
+        NewHeader,
+        CasesByAgeChart,
+        LeafletMap,
+        VaccinePieChart,
+        DeathsByAgeChart,
+        UsefulInfo
     }
 }
 </script>
