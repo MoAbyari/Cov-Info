@@ -20,7 +20,7 @@ Live demo: https://cov-info-app.herokuapp.com
 
 ## Inspiration
 
-* Representing updated info of NSW COVID-19 stats  
+* To Represente updated info of NSW COVID-19 stats  
 * To become more familiar with the challenges of a team environment throughout the development lifecycle.
 * To predefine the design and wireframe using Pigma. 
 * To get more practice with Node.js and Vue.js as well as the challenges of utilising a live map, using GeoJson, tiling and colour-coding the map. 
