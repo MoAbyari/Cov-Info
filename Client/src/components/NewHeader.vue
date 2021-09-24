@@ -4,19 +4,21 @@
             <img src="../assets/logo.png" alt="logo">
             <p>NSW COVID information website</p>
         </div>
-        <h2 class="title" >NSW Covid Info</h2>
+        <h2 class="title" >NSW COVID Info</h2>
         <div class="section">
-            <div class="card green">
-                <p>Today's cases</p>
-                <strong>{{ info.NewCases }}</strong>
-            </div>
-            <div class="card blue">
-                <p>Total cases</p>
-                <strong>{{ info.Cases }}</strong>
-            </div>
-            <div class="card pink">
-                <p>Total deaths</p>
-                <strong>{{ info.Deaths }}</strong>
+            <div class="info-wrapper">
+                <div class="card green">
+                    <p>Today's cases</p>
+                    <strong>{{ info.NewCases }}</strong>
+                </div>
+                <div class="card blue card-margin">
+                    <p>Total cases</p>
+                    <strong>{{ info.Cases }}</strong>
+                </div>
+                <div class="card pink">
+                    <p>Total deaths</p>
+                    <strong>{{ info.Deaths }}</strong>
+                </div>
             </div>
 
             <div class="show-more">
@@ -33,7 +35,7 @@
                 </button>
             </div>
 
-            <div class="more-info" v-if="showMore">
+            <div class="more-info" v-bind:class="{ hideContent: !showMore }">
                 <div class="card">
                     <p>
                         <img class="icon" src="../assets/Hospital.png" alt="hospital-icon">
@@ -41,7 +43,7 @@
                     </p>
                     <strong>{{ info.concurrentHospitalisations }}</strong>
                 </div>
-                <div class="card">
+                <div class="card card-margin">
                     <p>
                         <img class="icon" src="../assets/ICU.png" alt="ICU-icon">
                         Cases in ICU
@@ -88,6 +90,29 @@ export default {
 .info-section {
     background-color: #0058A9;
     color: white;
+    padding-top: 60px;
+}
+
+@media screen and (min-width: 800px) {
+    .more-info {
+        display: flex !important;
+    }
+
+    .info-wrapper {
+        display: flex;
+    }
+
+    .card-margin {
+        margin: 0 20px;
+    }
+
+    .show-more {
+        display: none !important;
+    }
+}
+
+.hideContent {
+   display: none;
 }
 
 .logo {
@@ -98,7 +123,6 @@ export default {
 
 .logo img {
     width: 100px;
-    margin-top: 50px;
     text-align: center;
 }
 
@@ -123,6 +147,7 @@ export default {
     height: 82px;
     margin-bottom: 22px;
     align-items: center;
+    flex: 1;
 }
 
 .green {

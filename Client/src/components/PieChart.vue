@@ -15,19 +15,19 @@ export default {
     const dose1perc = Math.floor(dose1 / population * 100);
     const dose2perc = Math.floor(dose2 / population * 100);
     const nonVaccinated = Math.floor((population - (dose1 + dose2)) / population * 100);
-   
+   console.log(dose2Population);
 
       return {
         chartData: {
-          labels: ["Non-Vaccinated", "Fully Vaccinated", "1st Dose-Vaccinated"
+          labels: ["Non-Vaccinated (%)", "Fully Vaccinated (%)", "1st Dose-Vaccinated (%)"
           ],
           datasets: [{
             label: 'Pie Chart',
             borderWidth: 1,
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
+              'rgba(255, 99, 132,0.7)',
+              'rgba(54, 162, 235,0.7)',
+              'rgba(255, 206, 86,0.7)',
             ],
             borderColor: [
               'rgba(255,99,132,1)',
@@ -41,7 +41,7 @@ export default {
         options: {
           legend: {
             display: true,
-            position: 'bottom',
+            position: 'bottom'
           },
           layout:{
             padding: 15

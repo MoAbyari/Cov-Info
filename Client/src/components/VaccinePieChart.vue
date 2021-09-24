@@ -1,7 +1,7 @@
 <template>
   <div class="pie-chart-container">
     <div class= "pie-chart-title">
-      <h2>NSW vaccination stats</h2>
+      <h2>NSW Vaccination stats</h2>
     </div>
     <div class="pie-chart-Ellipse2">
       <pie-chart v-if="loaded" :chartData="chartData"></pie-chart>
@@ -38,7 +38,7 @@ export default {
     max-height: 90vh;
     max-width: 90vh;
     margin: 0 auto;
-    padding: 20px 29px 7px 29px;
+    padding: 60px 29px 30px 29px;
   } 
 
   .pie-chart-container h2 {
