@@ -14,6 +14,10 @@ This web app is built using Node.js for the back-end and Vue.js as a front-end f
 Live demo: https://cov-info-app.herokuapp.com
 
 
+![Screen Shot 2021-09-24 at 3 32 47 pm](https://user-images.githubusercontent.com/86284097/134628294-a959f712-98b6-4f71-9bf5-3414bfe72a14.png)
+![Screen Shot 2021-09-24 at 3 33 21 pm](https://user-images.githubusercontent.com/86284097/134628332-04320a7a-1de7-404c-9228-854b508afcec.png)
+
+
 ## Inspiration
 
 * Representing updated info of NSW COVID-19 stats  
